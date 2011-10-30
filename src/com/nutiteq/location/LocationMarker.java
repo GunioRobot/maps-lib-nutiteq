@@ -12,7 +12,7 @@ public interface LocationMarker extends LocationListener {
   /**
    * Set location source into marker. Could me used for source state status
    * retrieving
-   * 
+   *
    * @param locationSource
    *          location source associated with this marker
    */

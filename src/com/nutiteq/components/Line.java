@@ -21,7 +21,7 @@ public class Line implements OnMapElement {
 
   /**
    * Constructor for line object with default style
-   * 
+   *
    * @param points
    *          points in line (in WGS84)
    */
@@ -35,7 +35,7 @@ public class Line implements OnMapElement {
 
   /**
    * Constructor for line with user defined style
-   * 
+   *
    * @param points
    *          points in line (in WGS84)
    * @param style
@@ -124,7 +124,7 @@ public class Line implements OnMapElement {
 
   /**
    * Draw a line as a polygon.
-   * 
+   *
    * @param g
    *          Graphics object
    * @param x1

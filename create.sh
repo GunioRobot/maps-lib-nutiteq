@@ -72,4 +72,4 @@ fromdos $DST/src/com/mgmaps/utils/Tools.java
 
 echo 'Finished.'
 
-exit 0 
+exit 0

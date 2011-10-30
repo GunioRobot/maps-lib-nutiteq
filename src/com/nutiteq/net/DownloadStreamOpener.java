@@ -25,7 +25,7 @@ public interface DownloadStreamOpener {
   /**
    * Open a connection to given network resource and pass opened stream to
    * streamWaiter.
-   * 
+   *
    * @param streamWaiter
    *          object asking for stream to be opened
    * @param url

@@ -10,7 +10,7 @@ public interface Projection {
   /**
    * Convert a point on pixel map to WGS84 coordinates (decimal coordinates *
    * 1000000)
-   * 
+   *
    * @param pos
    *          pixel point on the map (on 256x256 pixels map of the world 0E 0N
    *          is located at map pixel 128x : 128y)
@@ -20,7 +20,7 @@ public interface Projection {
 
   /**
    * Convert WGS84 coordinates to pixel point on map
-   * 
+   *
    * @param wgs
    *          WGS84 coordinates (decimal coordinates * 1000000)
    * @param zoom

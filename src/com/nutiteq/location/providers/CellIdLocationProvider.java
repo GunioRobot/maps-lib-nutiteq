@@ -34,7 +34,7 @@ public class CellIdLocationProvider extends TimerTask implements CellIdResponseW
 
   /**
    * Create location provider for single query
-   * 
+   *
    * @param dataReader
    *          data reader used for cellid data accessing
    */
@@ -53,7 +53,7 @@ public class CellIdLocationProvider extends TimerTask implements CellIdResponseW
 
   /**
    * Create location provider that queries for location at given interval
-   * 
+   *
    * @param dataReader
    *          data reader used for cellid data access
    * @param updateInterval

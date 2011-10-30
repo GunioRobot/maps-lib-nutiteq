@@ -6,7 +6,7 @@ package com.nutiteq.controls;
  */
 public interface ControlKeys {
   /**
-   * 
+   *
    */
   int NO_ACTION_KEY = -1;
   /**

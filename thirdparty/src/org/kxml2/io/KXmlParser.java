@@ -87,7 +87,7 @@ public class KXmlParser implements XmlPullParser {
     private int stackMismatch = 0;
     private String error;
 
-    /** 
+    /**
      * A separate peek buffer seems simpler than managing
      * wrap around in the first level read buffer */
 
@@ -248,8 +248,8 @@ public class KXmlParser implements XmlPullParser {
             null);
     }
 
-    /** 
-     * common base for next and nextToken. Clears the state, except from 
+    /**
+     * common base for next and nextToken. Clears the state, except from
      * txtPos and whitespace. Does not set the type variable */
 
     private final void nextImpl() throws IOException, XmlPullParserException {
@@ -327,7 +327,7 @@ public class KXmlParser implements XmlPullParser {
                         if (isWhitespace)
                             type = IGNORABLE_WHITESPACE;
                         // make exception switchable for instances.chg... !!!!
-                        //	else 
+                        //	else
                         //    exception ("text '"+getText ()+"' not allowed outside root element");
                     }
                     return;
@@ -673,9 +673,9 @@ public class KXmlParser implements XmlPullParser {
                     error("attr value delimiter missing!");
                     delimiter = ' ';
                 }
-				else 
+				else
 					read();
-				
+
                 int p = txtPos;
                 pushText(delimiter, true);
 
@@ -720,7 +720,7 @@ public class KXmlParser implements XmlPullParser {
         elementStack[sp + 2] = name;
     }
 
-    /** 
+    /**
      * result: isWhitespace; if the setName parameter is set,
      * the name of the entity is stored in "name" */
 
@@ -728,8 +728,8 @@ public class KXmlParser implements XmlPullParser {
         throws IOException, XmlPullParserException {
 
         push(read()); // &
-        
-        
+
+
         int pos = txtPos;
 
         while (true) {
@@ -746,7 +746,7 @@ public class KXmlParser implements XmlPullParser {
             	if(!relaxed){
             		error("unterminated entity ref");
             	}
-                //; ends with:"+(char)c);           
+                //; ends with:"+(char)c);
                 if (c != -1)
                     push(c);
                 return;
@@ -844,7 +844,7 @@ public class KXmlParser implements XmlPullParser {
             peek[0] = peek[1];
         }
         //		else {
-        //			result = peek[0]; 
+        //			result = peek[0];
         //			System.arraycopy (peek, 1, peek, 0, peekCount-1);
         //		}
         peekCount--;
@@ -987,7 +987,7 @@ public class KXmlParser implements XmlPullParser {
         try {
 
             if (enc == null) {
-                // read four bytes 
+                // read four bytes
 
                 int chk = 0;
 
@@ -1121,7 +1121,7 @@ public class KXmlParser implements XmlPullParser {
             return version;
         if (isProp(property, true, "xmldecl-standalone"))
             return standalone;
-		if (isProp(property, true, "location"))            
+		if (isProp(property, true, "location"))
 			return location != null ? location : reader.toString();
         return null;
     }
@@ -1330,7 +1330,7 @@ public class KXmlParser implements XmlPullParser {
             nextImpl();
             if (type < minType)
                 minType = type;
-            //	    if (curr <= TEXT) type = curr; 
+            //	    if (curr <= TEXT) type = curr;
         }
         while (minType > ENTITY_REF // ignorable
             || (minType >= TEXT && peekType() >= TEXT));
@@ -1419,10 +1419,10 @@ public class KXmlParser implements XmlPullParser {
     /**
       * Skip sub tree that is currently porser positioned on.
       * <br>NOTE: parser must be on START_TAG and when funtion returns
-      * parser will be positioned on corresponding END_TAG. 
+      * parser will be positioned on corresponding END_TAG.
       */
 
-    //	Implementation copied from Alek's mail... 
+    //	Implementation copied from Alek's mail...
 
     public void skipSubTree() throws XmlPullParserException, IOException {
         require(START_TAG, null, null);

@@ -8,7 +8,7 @@ import com.nutiteq.components.OnMapElement;
 public interface OnMapElementListener {
   /**
    * Element clicked
-   * 
+   *
    * @param element
    *          clicked element
    */
@@ -16,7 +16,7 @@ public interface OnMapElementListener {
 
   /**
    * Element gained focus
-   * 
+   *
    * @param element
    *          focused element
    */
@@ -24,7 +24,7 @@ public interface OnMapElementListener {
 
   /**
    * Element lost focus
-   * 
+   *
    * @param element
    *          unfocused element
    */

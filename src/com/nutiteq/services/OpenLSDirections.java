@@ -24,7 +24,7 @@ public class OpenLSDirections implements DirectionsService, ResourceRequestor, R
   public static final String NUTITEQ_DEFAULT_SERVICE_URL = "http://lbs.nutiteq.ee/osm/geocode_kml.php";
 
   /**
-   * 
+   *
    * @param directionsWaiter
    *          object waiting for directions result
    * @param baseurl

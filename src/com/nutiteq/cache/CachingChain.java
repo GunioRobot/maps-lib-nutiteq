@@ -8,7 +8,7 @@ public class CachingChain implements Cache {
 
   /**
    * Define caching chain with given cache levels.
-   * 
+   *
    * @param cacheLevels
    *          cache levels to be used in this chain.
    */

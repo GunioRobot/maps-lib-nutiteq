@@ -51,7 +51,7 @@ public class KmlStylesCache {
     if (url == null) {
       return null;
     }
-    
+
     String imageUrl = null;
     if (!url.startsWith("#")) {
       imageUrl = url;

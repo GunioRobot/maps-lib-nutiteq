@@ -283,27 +283,27 @@ public class KmlServicesHandler implements DownloadRequestor, ImageWaiter, KmlEl
 
     return null;
   }
-  
+
   /**
  * get all places from a KML Service
  * @param service
  * @return Array of KmlPlace[]
  */
 public KmlPlace[] getKmlPlaces(final KmlService service) {
-    
+
     if(service == null){
         return null;
     }
-    
+
       Vector out = new Vector();
-      
+
         for (int i = 0; i < services.length; i++) {
             if (service.equals(services[i])) {
                 for (int p = 0; p < placesForService[i].size(); p++) {
                     out.addElement((KmlPlace) placesForService[i].elementAt(p));
                 }
             }
-        
+
         }
       KmlPlace[] retval = new KmlPlace[out.size()];
       out.copyInto(retval);
@@ -313,7 +313,7 @@ public KmlPlace[] getKmlPlaces(final KmlService service) {
 public KmlPlace[] getKmlPlaces() {
 
     Vector out = new Vector();
-    
+
     for (int i = 0; i < services.length; i++) {
             for (int p = 0; p < placesForService[i].size(); p++) {
                 out.addElement((KmlPlace) placesForService[i].elementAt(p));

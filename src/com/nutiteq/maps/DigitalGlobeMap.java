@@ -13,7 +13,7 @@ public class DigitalGlobeMap extends EPSG3785 implements UnstreamedMap {
 
   /**
    * Create new map for 256 tile size and zoom range 0-19.
-   * 
+   *
    * @param licenseKey
    *          license key issued by DigitalGlobe
    */

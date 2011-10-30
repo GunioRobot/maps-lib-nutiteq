@@ -9,7 +9,7 @@ import com.nutiteq.components.WgsBoundingBox;
 public interface KmlService {
   /**
    * Does the service need an update. Called after move method.
-   * 
+   *
    * @param boundingBox
    *          bounding box for new map location (coordinates in WGS84)
    * @param zoom
@@ -20,7 +20,7 @@ public interface KmlService {
 
   /**
    * Called after if needsUpdate has returned true.
-   * 
+   *
    * @param boundingBox
    *          bounding box for screen view of the map (coordinates in WGS84)
    * @param zoom
@@ -32,7 +32,7 @@ public interface KmlService {
   /**
    * Maximum number of results returned from this service. If, for some reason,
    * server returns more results, extra results will be ignored.
-   * 
+   *
    * @return number of placemarks returned by this service on one request.
    */
   int maxResults();

@@ -27,7 +27,7 @@ public class WgsBoundingBox {
 
   /**
    * Calculate approximate center for this bounding box
-   * 
+   *
    * @return center point for bounding box in WGS84
    */
   public WgsPoint getBoundingBoxCenter() {

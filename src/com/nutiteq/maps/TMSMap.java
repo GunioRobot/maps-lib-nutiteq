@@ -17,7 +17,7 @@ public class TMSMap extends EPSG3785 implements UnstreamedMap {
     /**
      * Final URL will be generated as
      * <b>baseUrl</b><i>zoom</i>/<i>x</i>/<i>y</i><b>format</b>
-     * 
+     *
      * @param copyright
      *            Copyright graphics drawn to the map
      * @param baseUrl
@@ -42,7 +42,7 @@ public class TMSMap extends EPSG3785 implements UnstreamedMap {
     /**
      * Tiled Map Server based general map server API. Final URL will be
      * generated as <b>baseUrl</b><i>zoom</i>/<i>x</i>/<i>y</i><b>format</b>
-     * 
+     *
      * @param copyright
      *            Copyright as string
      * @param baseUrl

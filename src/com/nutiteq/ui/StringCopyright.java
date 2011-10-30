@@ -17,7 +17,7 @@ public class StringCopyright implements Copyright {
 
   /**
    * Create copyright notice
-   * 
+   *
    * @param copyright
    *          copyright text
    */
@@ -27,7 +27,7 @@ public class StringCopyright implements Copyright {
 
   /**
    * Create copyright notice with given font size.
-   * 
+   *
    * @param copyright
    *          copyright text.
    * @param fontSize

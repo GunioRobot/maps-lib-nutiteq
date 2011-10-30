@@ -46,7 +46,7 @@ public abstract class BaseMap implements GeoMap {
   public BaseMap(final String copyright, final int tileSize, final int minZoom, final int maxZoom) {
     this(new StringCopyright(copyright), tileSize, minZoom, maxZoom);
   }
-  
+
   public Task getInitializationTask() {
     return null;
   }
@@ -82,7 +82,7 @@ public abstract class BaseMap implements GeoMap {
    * center point will be in 128x128. If zoomed in one level world size will be
    * 512x512 pixels and center point will be at 256x256.
    * </p>
-   * 
+   *
    * @param middlePoint
    *          map position on witch to perform zoom action
    * @param zoomSteps
@@ -108,7 +108,7 @@ public abstract class BaseMap implements GeoMap {
 
   /**
    * Get map bounds for specified zoom level.
-   * 
+   *
    * @param zoom
    *          zoom level for witch to get map bounds
    * @return bounds for zoom level for given map
@@ -122,7 +122,7 @@ public abstract class BaseMap implements GeoMap {
   /**
    * Get map height for given zoom level. Default implementation is done for
    * OpenStreetMap system (map tile edge is power of 2)
-   * 
+   *
    * @param zoom
    *          zoom level for witch to get map height
    * @return map height
@@ -134,7 +134,7 @@ public abstract class BaseMap implements GeoMap {
   /**
    * Get map width for given zoom level. Default implementation is done for
    * OpenStreetMap system (map tile edge is power of 2)
-   * 
+   *
    * @param zoom
    *          zoom level for witch to get map width
    * @return map width

@@ -12,7 +12,7 @@ public class Route {
 
   /**
    * Route from directions service
-   * 
+   *
    * @param summary
    *          summary of the route
    * @param routeLine
@@ -29,7 +29,7 @@ public class Route {
 
   /**
    * Get route summary
-   * 
+   *
    * @return summary of route
    */
   public RouteSummary getRouteSummary() {
@@ -38,7 +38,7 @@ public class Route {
 
   /**
    * Get line for this route
-   * 
+   *
    * @return route lines
    */
   public Line getRouteLine() {
@@ -47,7 +47,7 @@ public class Route {
 
   /**
    * Get instructios for this route
-   * 
+   *
    * @return instruction points
    */
   public RouteInstruction[] getInstructions() {
@@ -57,7 +57,7 @@ public class Route {
   /**
    * Get route markers, that can be shown on map. Images order is defined in
    * {@link com.nutiteq.services.DirectionsService}
-   * 
+   *
    * @param routeImages
    *          images to be used in direction instructions
    * @return instructions that can be shown on map

@@ -14,7 +14,7 @@ public class TileMapBounds {
 
   /**
    * Create tile map bounds.
-   * 
+   *
    * @param minPoint
    *          minimum valid point on map
    * @param maxPoint
@@ -27,7 +27,7 @@ public class TileMapBounds {
 
   /**
    * Is given position on tile map within map bounds
-   * 
+   *
    * @param mapX
    *          position x
    * @param mapY
@@ -41,7 +41,7 @@ public class TileMapBounds {
 
   /**
    * Calculate map position correction for it to be within map bounds.
-   * 
+   *
    * @param middlePoint
    *          point for witch to get the correction
    * @return correction needed on x/y axis

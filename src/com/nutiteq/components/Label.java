@@ -5,14 +5,14 @@ import javax.microedition.lcdui.Graphics;
 public interface Label {
   /**
    * String representation of this label
-   * 
+   *
    * @return label as string
    */
   String getLabel();
 
   /**
    * Paint label to screen
-   * 
+   *
    * @param g
    *          graphics object to be drawn on
    * @param screenX
@@ -28,7 +28,7 @@ public interface Label {
 
   /**
    * Is given screen point on label
-   * 
+   *
    * @param screenX
    *          place x location on screen
    * @param screenY
@@ -48,7 +48,7 @@ public interface Label {
 
   /**
    * Notify label about the click and click location on screen
-   * 
+   *
    * @param screenX
    *          place x location on screen
    * @param screenY
@@ -67,7 +67,7 @@ public interface Label {
 
   /**
    * Get pixels needed for proper label display.
-   * 
+   *
    * @param screenX
    *          object location x on screen
    * @param screenY

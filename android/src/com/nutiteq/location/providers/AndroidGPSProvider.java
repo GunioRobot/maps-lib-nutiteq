@@ -25,7 +25,7 @@ public class AndroidGPSProvider implements LocationSource, android.location.Loca
 
   /**
    * Create new location provider using GPS positioning.
-   * 
+   *
    * @param locationManager
    *          android location manager
    * @param updateInterval
@@ -39,7 +39,7 @@ public class AndroidGPSProvider implements LocationSource, android.location.Loca
 
   /**
    * Create new location provider using defined Android positioning option.
-   * 
+   *
    * @param locationManager
    *          android location manager
    * @param provider

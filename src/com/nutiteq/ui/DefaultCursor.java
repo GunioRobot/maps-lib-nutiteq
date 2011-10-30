@@ -14,7 +14,7 @@ public class DefaultCursor implements Cursor {
 
   /**
    * Constructor for default cursor.
-   * 
+   *
    * @param cursorColor
    *          color for the cursor (in format 0xAARRGGBB)
    */

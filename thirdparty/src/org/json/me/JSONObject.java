@@ -84,11 +84,11 @@ import java.util.Vector;
  * @version 2
  */
 public class JSONObject {
-    
+
 //#if CLDC=="1.0"
     public static final Boolean TRUE = new Boolean(true);
     public static final Boolean FALSE = new Boolean(false);
-//#endif    
+//#endif
 
     /**
      * JSONObject.NULL is equivalent to the value that JavaScript calls null,
@@ -245,8 +245,8 @@ public class JSONObject {
 //#             }
 //#         }
 //#     }
-//#endif    
-    
+//#endif
+
     /**
      * Construct a JSONObject from a string.
      * This is the most commonly used JSONObject constructor.
@@ -295,7 +295,7 @@ public class JSONObject {
 //#      * @param key   A key string.
 //#      * @param value An object to be accumulated under the key.
 //#      * @return this.
-//#      * @throws JSONException If the key is null or if the current value 
+//#      * @throws JSONException If the key is null or if the current value
 //#      * 	associated with the key is not a JSONArray.
 //#      */
 //#     public JSONObject append(String key, Object value)
@@ -305,7 +305,7 @@ public class JSONObject {
 //#         if (o == null) {
 //#             put(key, new JSONArray().put(value));
 //#         } else if (o instanceof JSONArray) {
-//#             throw new JSONException("JSONObject[" + key + 
+//#             throw new JSONException("JSONObject[" + key +
 //#             		"] is not a JSONArray.");
 //#         } else {
 //#             put(key, new JSONArray().put(o).put(value));
@@ -325,9 +325,9 @@ public class JSONObject {
 //#         if (Double.isInfinite(d) || Double.isNaN(d)) {
 //#         	return "null";
 //#         }
-//# 
+//#
 //# // Shave off trailing zeros and decimal point, if possible.
-//# 
+//#
 //#         String s = Double.toString(d);
 //#         if (s.indexOf('.') > 0 && s.indexOf('e') < 0 && s.indexOf('E') < 0) {
 //#             while (s.endsWith("0")) {
@@ -418,7 +418,7 @@ public class JSONObject {
 //#                 throw new JSONException("JSONObject[" + quote(key) +
 //#                     "] is not a number.");
 //#             }
-//#         } 
+//#         }
 //#         throw new JSONException("JSONObject[" + quote(key) +
 //#             "] is not a number.");
 //#     }
@@ -452,7 +452,7 @@ public class JSONObject {
 //#         } else if (o instanceof String) {
 //#             return (int) getDouble(key);
 //#endif
-        } 
+        }
         throw new JSONException("JSONObject[" + quote(key) +
             "] is not a number.");
     }
@@ -519,7 +519,7 @@ public class JSONObject {
 //#         } else if (o instanceof String) {
 //#             return (long) getDouble(key);
 //#endif
-        } 
+        }
         throw new JSONException("JSONObject[" + quote(key) +
             "] is not a number.");
     }
@@ -592,7 +592,7 @@ public class JSONObject {
         return ja.length() == 0 ? null : ja;
     }
 
-    
+
     /**
      * Shave off trailing zeros and decimal point, if possible.
      */
@@ -663,7 +663,7 @@ public class JSONObject {
         }
     }
 
-    
+
     /**
      * Put a key/value pair in the JSONObject, where the value will be a
      * JSONArray which is produced from a Collection.
@@ -677,7 +677,7 @@ public class JSONObject {
         return this;
     }
 
-    
+
 //#if CLDC!="1.0"
 //#     /**
 //#      * Get an optional double associated with a key,
@@ -895,7 +895,7 @@ public class JSONObject {
         return this;
     }
 
-     
+
 //#ifdef PRODUCER
 //#     /**
 //#      * Put a key/value pair in the JSONObject, where the value will be a
@@ -909,8 +909,8 @@ public class JSONObject {
 //#         put(key, new JSONObject(value));
 //#         return this;
 //#     }
-//#endif    
-    
+//#endif
+
     /**
      * Put a key/value pair in the JSONObject. If the value is null,
      * then the key will be removed from the JSONObject if it is present.
@@ -1213,7 +1213,7 @@ public class JSONObject {
 //#else
         if (
 //#endif
-            value instanceof Byte || value instanceof Short || 
+            value instanceof Byte || value instanceof Short ||
             value instanceof Integer || value instanceof Long) {
             return numberToString(value);
         }
@@ -1259,7 +1259,7 @@ public class JSONObject {
 //#else
         if (
 //#endif
-            value instanceof Byte || value instanceof Short || 
+            value instanceof Byte || value instanceof Short ||
             value instanceof Integer || value instanceof Long) {
             return numberToString(value);
         }

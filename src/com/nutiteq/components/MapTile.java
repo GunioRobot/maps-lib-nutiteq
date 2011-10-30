@@ -75,7 +75,7 @@ public class MapTile {
 
   /**
    * Not part of public API Check if the map tile is visible.
-   * 
+   *
    * @param centerPos
    *          the position of the center of the map
    * @return true if visible, false otherwise

@@ -20,7 +20,7 @@ import com.nutiteq.utils.Utils;
  * Default implementation for geocoding services. Uses default Nutiteq backend
  * for searching.
  * </p>
- * 
+ *
  * <p>
  * Additional search parameters can be added to search URL by appending these to
  * baseurl used in service creation.
@@ -56,7 +56,7 @@ public class GeocodingService implements Service, KmlElementsWaiter,
     private boolean stopped;
 
     /**
-     * 
+     *
      * @param resultWaiter
      *            object waiting for search results
      * @param baseurl

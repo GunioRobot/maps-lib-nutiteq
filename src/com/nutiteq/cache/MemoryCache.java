@@ -8,7 +8,7 @@ import java.util.Hashtable;
  * Memory cache implementing LRU (least recently used) strategy. If cache is
  * full, least recently used items will be pushed out.
  * </p>
- * 
+ *
  * <p>
  * Current implementation uses only actual data size. Objects/keys overhead is
  * not calculated in cache size.
@@ -23,7 +23,7 @@ public class MemoryCache implements Cache {
 
   /**
    * Create a new MemoryCache instance.
-   * 
+   *
    * @param cacheSize
    *          cache size in bytes.
    */

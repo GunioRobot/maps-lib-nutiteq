@@ -384,11 +384,11 @@ public class Utils {
 
     return 0;
   }
-  
+
   /**
    * generates round polygon (circle) based on center, radius and number of points
    * Bases on spheroid with WGS84 primary axis radius (6378137 m)
-   * @param center defines lat, long of center  
+   * @param center defines lat, long of center
    * @param radius in meters
    * @param points number of required points. 360/points should be integer. About 24 looks typically fine.
    * @return array of WgsPoints. Can be used to make a line or polygon from these

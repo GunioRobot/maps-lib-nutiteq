@@ -12,7 +12,7 @@ public interface Cursor {
    * Paint cursor on the screen. At the moment the &quot;selection point&quot;
    * will be always in displayed objects ({@link com.nutiteq.MapComponent} or
    * {@link com.nutiteq.MapItem}) center.
-   * 
+   *
    * @param g
    *          graphics object to paint on
    * @param screenX
@@ -29,7 +29,7 @@ public interface Cursor {
   /**
    * Get the &quote;select&quote; point on screen for cursor. This point will be
    * used for place/map clicks, etc.
-   * 
+   *
    * @param displayWidth
    *          map view width
    * @param displayHeight

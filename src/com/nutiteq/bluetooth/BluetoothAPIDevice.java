@@ -31,7 +31,7 @@ public class BluetoothAPIDevice implements BluetoothDevice, DiscoveryListener,
 
   /**
    * Create new browser with caller, that could handle found devices.
-   * 
+   *
    * @param handler
    *          handler for receiving found devices
    */

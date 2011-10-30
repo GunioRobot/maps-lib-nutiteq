@@ -18,7 +18,7 @@ public class MotorolaCellIdLocationProvider extends CellIdLocationProvider {
 
   /**
    * Create location provider with custom cellId service.
-   * 
+   *
    * @param service
    *          cellId service used for location finding
    */

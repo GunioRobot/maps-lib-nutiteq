@@ -1,7 +1,7 @@
 package com.nutiteq.controls;
 
 /**
- * Keys handler for Android G1 phone. 
+ * Keys handler for Android G1 phone.
  */
 public class AndroidKeysHandler extends UserDefinedKeysMapping {
   public AndroidKeysHandler() {

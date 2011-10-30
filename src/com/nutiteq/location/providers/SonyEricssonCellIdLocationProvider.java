@@ -18,7 +18,7 @@ public class SonyEricssonCellIdLocationProvider extends CellIdLocationProvider {
 
   /**
    * Create location provider with custom cellId service
-   * 
+   *
    * @param service
    *          service used for location finding
    */

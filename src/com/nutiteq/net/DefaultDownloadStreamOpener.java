@@ -16,10 +16,10 @@ import com.nutiteq.utils.IOUtils;
 /**
  * Default stream opener used inside library. Handles cleanup for resources
  * opened by it.
- * 
+ *
  * Status codes 200 (OK) and 304 (not modified) are handled the same way - with
  * data read.
- * 
+ *
  * This implementation tries to follow up to 3 redirects (HTTP status codes 301,
  * 302, 307). If it is not successful, then an error notification will be sent
  * to stream waiter.
@@ -60,7 +60,7 @@ public class DefaultDownloadStreamOpener implements DownloadStreamOpener {
   /**
    * Add request properties, that will be added added to every request (for
    * example User-Agent).
-   * 
+   *
    * @param propertyName
    *          request property name
    * @param propertyValue

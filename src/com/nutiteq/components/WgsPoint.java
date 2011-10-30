@@ -22,7 +22,7 @@ public class WgsPoint {
 
   /**
    * Get coordinate latitude
-   * 
+   *
    * @return latitude
    */
   public double getLat() {
@@ -31,7 +31,7 @@ public class WgsPoint {
 
   /**
    * Get coordinate longitude
-   * 
+   *
    * @return longitude
    */
   public double getLon() {
@@ -48,7 +48,7 @@ public class WgsPoint {
 
   /**
    * Check if two WgsPoint objects refer to the same coordinates.
-   * 
+   *
    * @param obj
    *          the other object
    * @return true if the coordinates are the same, false otherwise
@@ -73,7 +73,7 @@ public class WgsPoint {
 
   /**
    * Compute distance in meters between two points.
-   * 
+   *
    * @param p1
    *          first point
    * @param p2
@@ -92,7 +92,7 @@ public class WgsPoint {
 
     return dist;
   }
-  
+
   /**
    * True course at p1 using great circle distance.
    * @param p1 first point
@@ -103,7 +103,7 @@ public class WgsPoint {
     final double dlon = Math.toRadians(p2.lon-p1.lon);
     final double p1latr = Math.toRadians(p1.lat);
     final double p2latr = Math.toRadians(p2.lat);
-    
+
     // check for poles
     final double c1 = Math.cos(p1latr);
     if (c1 < 0.00001) {
@@ -115,7 +115,7 @@ public class WgsPoint {
     final double at2 = c1*Math.sin(p2latr)-Math.sin(p1latr)*c2*Math.cos(dlon);
     final double at = Float11.atan2(at1, at2);
     final double atd = Math.toDegrees(at);
-    
+
     if (atd < 0) {
       return atd + 360;
     } else if (atd >= 360) {

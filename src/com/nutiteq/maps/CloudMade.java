@@ -33,7 +33,7 @@ public class CloudMade extends EPSG3785 implements GeoMap, UnstreamedMap {
 
   /**
    * Constructor for CloudMade map.
-   * 
+   *
    * @param licenseKey
    *          license key issued by CloudMade
    * @param tileSize
@@ -72,23 +72,23 @@ public class CloudMade extends EPSG3785 implements GeoMap, UnstreamedMap {
     result.append(".png?token=").append(token);
     return result.toString();
   }
-  
+
   /**
    * @return CloudMade token, usable for other services
    */
   public String getCloudMadeToken(){
     return token;
   }
-  
+
   public Task getInitializationTask() {
     if (token == null) {
       CloudMadeTokenRequest req = new CloudMadeTokenRequest();
       return new RetrieveNetworkResourceTask(req, null, req.getCachingLevel());
     }
     return null;
-    
+
   }
-  
+
   private class CloudMadeTokenRequest implements DataPostingDownloadable, ResourceRequestor, ResourceDataWaiter {
 
     public String getContentType() {

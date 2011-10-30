@@ -4,8 +4,8 @@ import org.kxml2.wap.WbxmlParser;
 import org.kxml2.wap.WbxmlSerializer;
 
 
-/** This class contains the wml coding tables for elements 
- *  and attributes needed by the WmlParser. 
+/** This class contains the wml coding tables for elements
+ *  and attributes needed by the WmlParser.
  */
 
 
@@ -96,8 +96,8 @@ public abstract class Wml {
 	"wml", // 3F
     };
 
-    
-    public static final String [] ATTR_START_TABLE = { 
+
+    public static final String [] ATTR_START_TABLE = {
 	"accept-charset", // 05
 	"align=bottom", // 06
 	"align=center", // 07
@@ -109,7 +109,7 @@ public abstract class Wml {
 	"content", // 0D
 	null, // 0E
 	"domain", // 0F
-	
+
 	"emptyok=false", // 10
 	"emptyok=true", // 11
 	"format", // 12
@@ -143,7 +143,7 @@ public abstract class Wml {
 	null, // 2D
 	"scheme", // 2E
 	"sendreferer=false", // 2F
-	
+
 	"sendreferer=true", // 30
 	"size", // 31
 	"src", // 32
@@ -209,7 +209,7 @@ public abstract class Wml {
 	"help", // 8D
 	"http://", // 8E
 	"http://www.", // 8F
-	
+
 	"https://", // 90
 	"https://www.", // 91
 	null, // 92
@@ -226,9 +226,9 @@ public abstract class Wml {
 	"text", // 9D
 	"top", // 9E
 	"unknown", // 9F
-	
+
 	"wrap", // A0
 	"www.", // A1
     };
-}    
+}
 

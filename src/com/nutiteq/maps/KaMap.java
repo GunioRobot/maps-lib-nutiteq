@@ -11,7 +11,7 @@ public class KaMap extends BaseKaMap implements UnstreamedMap {
   private final String tileUrlPattern;
 
   /**
-   * 
+   *
    * @param baseurl
    *          URL of tile.php
    * @param copyright

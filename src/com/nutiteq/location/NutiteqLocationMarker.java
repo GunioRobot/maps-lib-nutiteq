@@ -29,7 +29,7 @@ public class NutiteqLocationMarker extends TimerTask implements LocationMarker {
   private final Timer timer = new Timer();
 
   /**
-   * 
+   *
    * @param placemark
    *          graphical part of marker, painted on map
    * @param updateInterval
@@ -44,7 +44,7 @@ public class NutiteqLocationMarker extends TimerTask implements LocationMarker {
   }
 
   /**
-   * 
+   *
    * @param placemarkConnected
    *          marker for location source connected
    * @param connectionLost

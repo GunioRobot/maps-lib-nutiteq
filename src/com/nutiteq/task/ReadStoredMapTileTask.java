@@ -37,9 +37,9 @@ public class ReadStoredMapTileTask implements Task {
     final int areaParamIndex = filename.indexOf("|a=");
     if (areaParamIndex > 0) {
       filename = filename.substring(0, areaParamIndex);
-    } 
+    }
     Log.debug("ReadStoredMapTileTask fixed "+filename);
-    
+
     if ("".equals(filename)) {
       mapTileSearchTask.retrieveErrorFor(toRetrieve);
       return;
@@ -66,7 +66,7 @@ public class ReadStoredMapTileTask implements Task {
 
   /**
    * Read map tile from a file with multiple tiles.
-   * 
+   *
    * @param filename
    *          file to read from
    * @param tilesPerFile

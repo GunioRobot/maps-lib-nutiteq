@@ -15,7 +15,7 @@ public class MGMapsMap extends EPSG3785 implements UnstreamedMap {
     /**
      * Final URL will be generated as
      * <b>baseUrl</b>&x=<i>x</i>&y=<i>y</i>&zoom=<i>zoom</i></b>
-     * 
+     *
      * @param copyright
      *            Copyright graphics drawn to the map
      * @param baseUrl
@@ -38,10 +38,10 @@ public class MGMapsMap extends EPSG3785 implements UnstreamedMap {
     }
 
     /**
-     * MGMaps URL style map server API. 
+     * MGMaps URL style map server API.
      * Final URL will be generated as
      * <b>baseUrl</b>&x=<i>x</i>&y=<i>y</i>&zoom=<i>zoom</i></b>
-     * 
+     *
      * @param copyright
      *            Copyright as string
      * @param baseUrl

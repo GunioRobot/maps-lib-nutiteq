@@ -38,7 +38,7 @@ public class NightModeImageProcessor implements ImageProcessor {
       }
       retval = Image.createRGBImage(buf, width, height, false);
     } catch (Exception e) {
-      Log.printStackTrace(e); 
+      Log.printStackTrace(e);
     }
     return retval;
   }

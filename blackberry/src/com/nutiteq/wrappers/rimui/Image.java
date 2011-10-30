@@ -9,7 +9,7 @@ import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.EncodedImage;
 
 /**
- * Wrapper around Bitmap class to have similar interface to J2ME Image class. 
+ * Wrapper around Bitmap class to have similar interface to J2ME Image class.
  */
 public class Image {
   private final Bitmap image;
@@ -42,16 +42,16 @@ public class Image {
       final int height, final int transform) {
     final Bitmap subimage = new Bitmap(width, height);
     subimage.createAlpha(Bitmap.ALPHA_BITDEPTH_8BPP);
-    int [] data = new int[width * height];       
+    int [] data = new int[width * height];
     for(int i=0; i<data.length;i++){
-      data[i] = 0x00000000;  
+      data[i] = 0x00000000;
     }
     subimage.setARGB(data, 0, width, 0, 0, width, height);
     final net.rim.device.api.ui.Graphics graphics = new net.rim.device.api.ui.Graphics(subimage);
     graphics.drawBitmap(0, 0, width, height, source.getNativeImage(), x, y);
     return new Image(subimage);
   }
-  
+
   public static Image createRGBImage(final int[] imageData, final int width, final int height, final boolean processAlpha){
     Bitmap bitmap = new Bitmap(width,height);
     bitmap.setARGB(imageData,0,width,0,0,width,height);

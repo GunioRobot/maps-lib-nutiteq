@@ -18,7 +18,7 @@ public class SimpleWMSMap extends EPSG4326 implements GeoMap, UnstreamedMap {
 
   /**
    * Constructor for the simple WMS implementation
-   * 
+   *
    * @param baseurl
    *          base URL for the service
    * @param tileSize

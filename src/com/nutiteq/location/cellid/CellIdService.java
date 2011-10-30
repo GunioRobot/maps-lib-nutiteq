@@ -6,7 +6,7 @@ package com.nutiteq.location.cellid;
 public interface CellIdService {
   /**
    * Set object waiting for response from this service
-   * 
+   *
    * @param responseWaiter
    *          response waiting object
    */
@@ -14,7 +14,7 @@ public interface CellIdService {
 
   /**
    * Retrieve location with given cellid information
-   * 
+   *
    * @param cellId
    *          cell id as hex number
    * @param lac

@@ -14,19 +14,19 @@ public class Font {
   public static final int STYLE_PLAIN = 1;
   public static final int STYLE_ITALIC = 2;
   public static final int STYLE_UNDERLINED = 4;
-  
+
   public static final int SIZE_SMALL = 1;
   public static final int SIZE_MEDIUM = 2;
   public static final int SIZE_LARGE = 4;
 
   public static final int FONT_STATIC_TEXT = 0;
   public static final int FONT_INPUT_TEXT = 1;
-  
+
   private final net.rim.device.api.ui.Font wrapped;
 
   /**
    * Wrap native Font
-   * 
+   *
    * @param wrapped
    *          RIM UI from to be wrapped
    */
@@ -57,7 +57,7 @@ public class Font {
 
   /**
    * Retrieve wrapped RIM UI font
-   * 
+   *
    * @return wrapped 'native' font
    */
   public net.rim.device.api.ui.Font getNativeFont() {

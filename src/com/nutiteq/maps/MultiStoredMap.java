@@ -27,12 +27,12 @@ public class MultiStoredMap extends StoredMap {
   private StoredMapConfig storedMapConfig;
 
 //  private ZoomRange zoomRange = new ZoomRange(Integer.MAX_VALUE,Integer.MIN_VALUE);
-  
+
 /**
- * Enables to use multiple stored map packages. 
+ * Enables to use multiple stored map packages.
  * All packages must be in the same directory tree, as next level sub-directories, and must use the same map name
  * example usage: mapComponent.setMap(new MultiStoredMap("OpenStreetMap", "root1/maps"));
- *  
+ *
  * @param name Name of map. Must be the same as used in package directory structure
  * @param basePath File System root directory for the map packages, e.g. "root1/maps"
  */
@@ -42,10 +42,10 @@ public class MultiStoredMap extends StoredMap {
   }
 
   /**
-   * Enables to use multiple stored map packages. 
+   * Enables to use multiple stored map packages.
    * All packages must be in the same directory tree, as next level sub-directories, and must use the same map name
    * example usage: mapComponent.setMap(new MultiStoredMap("OpenStreetMap", "root1/maps",new StringCopyright("(c) OSM")));
-   *  
+   *
    * @param name Name of map. Must be the same as used in package directory structure
    * @param basePath File System root directory for the map packages, e.g. "root1/maps"
    * @param copyright CopyRight text/image for the overlay
@@ -62,8 +62,8 @@ public class MultiStoredMap extends StoredMap {
       this.fileExt = "mgm";
     }
 
-  
-  
+
+
   public void initializeConfigUsingFs(final FileSystem fs) {
     final Vector confs = new Vector();
     try {
@@ -114,7 +114,7 @@ public class MultiStoredMap extends StoredMap {
         }else{
             Log.debug("areaConfigurations is null");
         }
-      
+
     Log.debug(new StringBuffer("could_not_map_").append(mapX).append("_").append(mapY).append("_")
         .append(zoom).toString());
     return "";
@@ -210,14 +210,14 @@ public class MultiStoredMap extends StoredMap {
         final String zoomLevels = areaTokens[0];
         final int minZoom = Integer.parseInt(zoomLevels.substring(0, zoomLevels.indexOf('-')));
         final int maxZoom = Integer.parseInt(zoomLevels.substring(zoomLevels.indexOf('-') + 1));
-        
+
         if(minZoom<result.getMinZoom()){
          result.setMinZoom(minZoom);
         }
         if(maxZoom>result.getMaxZoom()){
             result.setMaxZoom(maxZoom);
         }
-        
+
         final WgsPoint areaMin = WgsPoint.parsePoint(WgsPoint.FORMAT_LAT_LON, areaTokens[1], ",");
         final WgsPoint areaMax = WgsPoint.parsePoint(WgsPoint.FORMAT_LAT_LON, areaTokens[2], ",");
         for (int z = minZoom; z <= maxZoom; z++) {
@@ -256,8 +256,8 @@ public class MultiStoredMap extends StoredMap {
   public boolean isInitializeConf() {
     return needToInitialize;
   }
-  
- /* 
+
+ /*
 public int getMaxZoom() {
     return zoomRange.getMaxZoom();
 }
@@ -284,7 +284,7 @@ public int[] getSupportedZoomLevels() {
   }
 
    // number of bits set?
-   byte c = 0; 
+   byte c = 0;
    for(int i=0;i<32;i++){ // 32 bits per int
        if((levels & (1<<i))>0){
         c++;
@@ -298,8 +298,8 @@ public int[] getSupportedZoomLevels() {
            levelsArray[j++] = i;
        }
    }
-  
+
    return levelsArray;
   }
-  
+
 }

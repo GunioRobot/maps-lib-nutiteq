@@ -5,17 +5,17 @@ package com.nutiteq.ui;
  * Thread driven panning implementation, that will pan map at 35 ms intervals.
  * Based on panning time, the panning speed will increase. At the beginning map
  * will be moved by one pixel, the by two pixels and at the end by four pixels.
- * 
+ *
  * This implementation has additional checks using keyRepeated events to check,
  * if panning is still active. If no keyRepeat events have been received for two
  * seconds, then panning is considered abandoned and is stopped. Current panning
  * action will be stopped, not the thread.
- * 
+ *
  * Abandoned panning actions can be created, when key is pressed for moving and
  * then some system interruption (incoming call, etc.) happens. Then the key
  * released event is never received by {@link com.nutiteq.MapComponent} and
  * panning is never stopped.
- * 
+ *
  * NOTE - for this implementation to work correctly,
  * {@link com.nutiteq.MapComponent} needs to receive keyRepeated events.
  */

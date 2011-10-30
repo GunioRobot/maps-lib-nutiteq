@@ -8,7 +8,7 @@ import com.nutiteq.components.MapTile;
 public interface StreamedMap {
   /**
    * Create path for retrieving given tiles as one file
-   * 
+   *
    * @param tiles
    *          tiles to be retrieved
    * @return path for given tiles

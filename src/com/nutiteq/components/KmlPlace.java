@@ -17,7 +17,7 @@ public class KmlPlace {
 
 
   /**
-   * 
+   *
    * @param place
    * @param styleUrl
    * @param description
@@ -36,7 +36,7 @@ public class KmlPlace {
   }
 
   /**
-   * 
+   *
    * @param name
    * @param icon
    * @param coordinates
@@ -83,10 +83,10 @@ public class KmlPlace {
       return extendedDataMap;
     }
 
-  
+
   /**
    * Update icon for this place
-   * 
+   *
    * @param image
    *          image for new icon
    */
@@ -96,7 +96,7 @@ public class KmlPlace {
 
   /**
    * Not par of public API
-   * 
+   *
    * @param url
    */
   public void setStyleUrl(final String url) {
@@ -105,7 +105,7 @@ public class KmlPlace {
 
   /**
    * Not part of public API
-   * 
+   *
    * @param imageUrl
    * @param stylesCache
    * @return is image used by this place
@@ -145,7 +145,7 @@ public class KmlPlace {
 
   /**
    * Not part of public API
-   * 
+   *
    * @return place as info object
    */
   public PlaceInfo getInfoObject() {

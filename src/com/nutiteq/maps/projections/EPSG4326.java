@@ -63,7 +63,7 @@ public abstract class EPSG4326 extends BaseMap implements Projection, GeoMap {
   /**
    * Set ratio between width and height. Use 1 for a "square world map" or 2 for
    * a stretched map. Only values >= 1 are accepted
-   * 
+   *
    * @param ratio
    *          width/height ratio
    */

@@ -37,7 +37,7 @@ public class BluetoothGpsBrowser extends List implements CommandListener, LocalT
 
   /**
    * Create new browser that will be shown on screen.
-   * 
+   *
    * @param title
    *          form title
    * @param sourceWaiter

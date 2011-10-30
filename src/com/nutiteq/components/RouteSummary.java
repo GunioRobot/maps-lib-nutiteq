@@ -26,7 +26,7 @@ public class RouteSummary {
 
   /**
    * Total time for the route
-   * 
+   *
    * @return route total time
    */
   public DurationTime getTotalTime() {
@@ -35,7 +35,7 @@ public class RouteSummary {
 
   /**
    * Distance of this route
-   * 
+   *
    * @return route distance
    */
   public Distance getDistance() {
@@ -44,7 +44,7 @@ public class RouteSummary {
 
   /**
    * Best view for full route
-   * 
+   *
    * @return bounding box for best view of the route
    */
   public WgsBoundingBox getBoundingBox() {

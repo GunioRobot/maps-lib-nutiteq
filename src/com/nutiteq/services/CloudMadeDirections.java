@@ -40,7 +40,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
   private static final String WAYPOINT_TAG = "wpt";
   private static final String DESCRIPTION_TAG = "desc";
   private static final String TURN_TAG = "turn";
-  
+
   private static final String ROUTE_EXTENSION_TAG = "extensions";
   private static final String TIME_TAG = "time";
   private static final String DISTANCE_TAG = "distance";
@@ -67,7 +67,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
   private boolean canceled;
   private String cloudMadeToken = null;
 
-  
+
   public CloudMadeDirections(final DirectionsWaiter directionsWaiter, final WgsPoint start,
       final WgsPoint end, final String routeType, final String apiKey, final String userId) {
     this(directionsWaiter, start, end, routeType, "", apiKey, userId);
@@ -79,7 +79,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
     this(CloudMadeToken.getCloudMadeToken(apiKey,userId), directionsWaiter, start, end, routeType, routeTypeModifier,apiKey);
   }
 
-  
+
   /**
    * @param token CloudMade token
    * @param directionsWaiter listener for directions result (callback)
@@ -99,7 +99,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
     this.routeTypeModifier = routeTypeModifier;
     this.cloudMadeToken=token;
     this.apiKey=apiKey;
-    
+
   }
 
   public void execute() {
@@ -147,7 +147,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
     final Vector wayPoints = new Vector();
     final Vector instructionPoints = new Vector();
     RouteSummary summary = null;
-    
+
     final KXmlParser parser = new KXmlParser();
     try {
       parser.setInput(reader);
@@ -193,7 +193,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
               totalTime = parseDuration(parser.nextText());
             } else if (DISTANCE_TAG.equals(tagName)) {
               distance = readDistance(parser);
-            } 
+            }
           }
           eventType = parser.next();
         }
@@ -202,7 +202,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
       }
       return new RouteSummary(totalTime, distance, boundingBox);
     }
-  
+
   private Distance readDistance(final KXmlParser parser) throws IOException {
     String distanceString;
     try {
@@ -222,12 +222,12 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
       return new Distance(0, "");
     }
   }
-  
+
   protected DurationTime parseDuration(final String time) {
       if (time == null || "".equals(time.trim())) {
         return new DurationTime(0, 0, 0, 0);
       }
-      
+
       try {
         int timeInt = Integer.parseInt(time);
         final int daysInt = timeInt / 86400;
@@ -242,7 +242,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
       }
     }
 
-  
+
   private RouteInstruction readInstruction(final KXmlParser parser, final int count)
       throws Exception {
     final String lat = parser.getAttributeValue(null, ATTRIBUTE_LATITUDE);
@@ -256,7 +256,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
     }
     eventType = parser.next();
     eventType = parser.next();
-    
+
     DurationTime time = null;
     Distance distance = null;
     int turn = IMAGE_ROUTE_START;
@@ -278,7 +278,7 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
             }
         eventType = parser.next();
       }
-    
+
     return new RouteInstruction(count, turn, time, description, distance, location);
   }
 
@@ -301,5 +301,5 @@ public class CloudMadeDirections implements DirectionsService, ResourceRequestor
   public int getCachingLevel() {
     return Cache.CACHE_LEVEL_NONE;
   }
-  
+
 }

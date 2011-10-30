@@ -6,7 +6,7 @@ package com.nutiteq.controls;
  */
 public interface ControlKeysHandler {
   /**
-   * Get action code for the key 
+   * Get action code for the key
    * @param keyCode phone key code
    * @return action code from {@link com.nutiteq.controls.ControlKeys}
    */

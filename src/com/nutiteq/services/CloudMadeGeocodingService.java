@@ -27,7 +27,7 @@ import com.nutiteq.utils.Utils;
  * Default implementation for geocoding services. Uses default Nutiteq backend
  * for searching.
  * </p>
- * 
+ *
  * <p>
  * Additional search parameters can be added to search URL by appending these to
  * baseurl used in service creation.
@@ -50,7 +50,7 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
 
     /**
      * CloudMade HTTP Geocoding and Geosearch API service. See <a href="http://developers.cloudmade.com/wiki/geocoding-http-api/Documentation">CloudMade guide</a>
-     * 
+     *
      * @param resultWaiter
      *            listener waiting for search results
      * @param cloudMadeKey
@@ -66,25 +66,25 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
      * @param objectType
      *            Limits search results to a specific object type. Full list of object types can be found from <a href="http://developers.cloudmade.com/wiki/geocoding-http-api/Object_Types">CloudMade web</a>
      * @param numberOfElements
-     *            max number of results to return 
+     *            max number of results to return
      * @param skip
      *            Number of results to skip from beginning
      * @param bBox
      *            Bounding box of the search area
      * @param bBoxOnly
-     *            Used only if bbox is specified. If set to false, the geocoder will return results from the whole planet, but still ranking results from within the specified bbox higher, otherwise only results from within the specified bbox will be returned. 
+     *            Used only if bbox is specified. If set to false, the geocoder will return results from the whole planet, but still ranking results from within the specified bbox higher, otherwise only results from within the specified bbox will be returned.
      * @param distance
      *            Radius of the search area, in meters. Special value closest limits search results to one, closest to the center point of the search area
-     *            
+     *
      */
     public CloudMadeGeocodingService(
             final GeocodingResultWaiter resultWaiter,
-            final String cloudMadeKey, 
+            final String cloudMadeKey,
             final String endUserId,
             final WgsPoint around,
             final String aroundAddress,
-            final String query, 
-            final String objectType, 
+            final String query,
+            final String objectType,
             final int numberOfElements,
             final int skip,
             final WgsBoundingBox bBox,
@@ -94,10 +94,10 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
         this(resultWaiter, CloudMadeToken.getCloudMadeToken(cloudMadeKey,endUserId), around, aroundAddress,
                 query,objectType,numberOfElements,skip,bBox,bBoxOnly,distance,cloudMadeKey);
 
-    }    
+    }
     /**
      * CloudMade HTTP Geocoding and Geosearch API service. See <a href="http://developers.cloudmade.com/wiki/geocoding-http-api/Documentation">CloudMade guide</a>
-     * 
+     *
      * @param resultWaiter
      *            listener waiting for search results
      * @param cloudMadeToken
@@ -111,13 +111,13 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
      * @param objectType
      *            Limits search results to a specific object type. Full list of object types can be found from <a href="http://developers.cloudmade.com/wiki/geocoding-http-api/Object_Types">CloudMade web</a>
      * @param numberOfElements
-     *            max number of results to return 
+     *            max number of results to return
      * @param skip
      *            Number of results to skip from beginning
      * @param bBox
      *            Bounding box of the search area
      * @param bBoxOnly
-     *            Used only if bbox is specified. If set to false, the geocoder will return results from the whole planet, but still ranking results from within the specified bbox higher, otherwise only results from within the specified bbox will be returned. 
+     *            Used only if bbox is specified. If set to false, the geocoder will return results from the whole planet, but still ranking results from within the specified bbox higher, otherwise only results from within the specified bbox will be returned.
      * @param distance
      *            Radius of the search area, in meters. Special value closest limits search results to one, closest to the center point of the search area
      * @param cloudMadeKey
@@ -125,11 +125,11 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
      */
     public CloudMadeGeocodingService(
             final GeocodingResultWaiter resultWaiter,
-            final String cloudMadeToken, 
+            final String cloudMadeToken,
             final WgsPoint around,
             final String aroundAddress,
-            final String query, 
-            final String objectType, 
+            final String query,
+            final String objectType,
             final int numberOfElements,
             final int skip,
             final WgsBoundingBox bBox,
@@ -185,7 +185,7 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
 
         searchUrl = url.toString();
         Log.debug("CloudMade url="+searchUrl);
-        
+
     }
 
     public void execute() {
@@ -213,9 +213,9 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
                 resultWaiter.errors(CloudMadeGeocodingService.NOT_FOUND);
                 return;
             }
-        
+
         final JsonKmlReader reader = new JsonKmlReader(this, this, searchUrl);
-        
+
         reader.dataRetrieved(data);
     }
 
@@ -248,6 +248,6 @@ public class CloudMadeGeocodingService implements Service, KmlElementsWaiter,
         // TODO Auto-generated method stub
         return null;
     }
-    
+
 
 }

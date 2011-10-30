@@ -13,7 +13,7 @@ public class QKMap extends EPSG3785 implements UnstreamedMap {
 
     /**
      * Quadtree based map general server API connector
-     * 
+     *
      * @param copyright
      *            Copyright graphics drawn to the map
      * @param baseUrl
@@ -38,7 +38,7 @@ public class QKMap extends EPSG3785 implements UnstreamedMap {
 
     /**
      * Quadtree based map general server API connector
-     * 
+     *
      * @param copyright
      *            Copyright as String
      * @param baseUrl

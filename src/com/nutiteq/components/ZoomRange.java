@@ -9,7 +9,7 @@ public class ZoomRange {
 
   /**
    * Map zoom range
-   * 
+   *
    * @param minZoom
    *          minimum zoom
    * @param maxZoom

@@ -11,7 +11,7 @@ public interface LocationDataConnection {
 
   /**
    * Open input stream to given location source
-   * 
+   *
    * @return opened input stream
    * @throws IOException
    *           if something went wrong

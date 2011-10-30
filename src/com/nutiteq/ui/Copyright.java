@@ -8,7 +8,7 @@ import javax.microedition.lcdui.Graphics;
 public interface Copyright {
   /**
    * Paint copyright notice on map view
-   * 
+   *
    * @param g
    *          graphics object to paint on
    * @param displayWidth

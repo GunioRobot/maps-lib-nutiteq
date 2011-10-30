@@ -9,9 +9,9 @@ public class Command {
   public static final int OK = 6;
   public static final int SCREEN = 7;
   public static final int STOP = 8;
-  
+
   private Command() {}
-  
+
   public Command(final String label, final int commandType, final int priority) {
 
   }

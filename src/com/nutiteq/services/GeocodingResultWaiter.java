@@ -8,7 +8,7 @@ import com.nutiteq.components.KmlPlace;
 public interface GeocodingResultWaiter {
   /**
    * Received results from server.
-   * 
+   *
    * @param kmlPlaces
    *          results found
    */

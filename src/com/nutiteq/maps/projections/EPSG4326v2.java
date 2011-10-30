@@ -9,12 +9,12 @@ import com.nutiteq.ui.Copyright;
 /**
  * Abstract class for doing WGS84 coordinates calculations to map pixels in
  * EPSG4326 (Plate-carree (flat) projection, to be used with WMS) and back.
- * 
+ *
  * Supports custom per-zoom scale specification and standard parallel (phi0)
  */
 public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   private final double equatorLength;
-  
+
   public EPSG4326v2(final Ellipsoid ellipsoid, final Copyright copyright, final int tileSize, final int minZoom,
       final int maxZoom) {
     super(copyright, tileSize, minZoom, maxZoom);
@@ -34,7 +34,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   private double xRatio = 1.0;
   // scales
   private double[] scales = null;
-  
+
   public int getMapWidth(int zoom) {
     if (scales == null) {
       return super.getMapWidth(zoom);
@@ -42,7 +42,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
       return (int) Math.floor(equatorLength/scales[zoom-getMinZoom()]+0.5);
     }
   }
-  
+
   public int getMapHeight(int zoom) {
     if (scales == null) {
       return super.getMapHeight(zoom);
@@ -91,7 +91,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   /**
    * Set ratio between width and height. Use 1 for a "square world map" or 2 for
    * a stretched map. Only values >= 1 are accepted.
-   * 
+   *
    * @param yRatio
    *          width/height ratio
    */
@@ -101,7 +101,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
     }
     this.yRatio = yRatio;
   }
-  
+
   /**
    * Set standard parallel (used for determining x ratio).
    * @param phi0 standard parallel
@@ -112,7 +112,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
     }
     this.xRatio = Math.cos(phi0*Math.PI/180);
   }
-  
+
   /**
    * Set an array of scales used for various zoom levels.
    * @param scales null for default scales
@@ -120,7 +120,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   public void setScales(double[] scales) {
     this.scales = scales;
   }
-  
+
   /**
    * Whether to add Y offset when ratio > 1.
    * @param addYOffset
@@ -128,7 +128,7 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   public void setAddYOffset(final boolean addYOffset) {
     this.addYOffset = addYOffset;
   }
-  
+
   public boolean getAddYOffset() {
     return addYOffset;
   }
@@ -136,11 +136,11 @@ public abstract class EPSG4326v2 extends BaseMap implements Projection, GeoMap {
   public double getYRatio() {
     return yRatio;
   }
-  
+
   public double getXRatio() {
     return xRatio;
   }
-  
+
   public double[] getScales() {
     return scales;
   }

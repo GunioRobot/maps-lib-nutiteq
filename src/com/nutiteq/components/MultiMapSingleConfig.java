@@ -12,7 +12,7 @@ public class MultiMapSingleConfig {
   private int tpfx;
   private int tpfy;
   private ZoomRange zoomRange = new ZoomRange(Integer.MAX_VALUE,Integer.MIN_VALUE);
-  
+
   public MultiMapSingleConfig(final String tilesDir, final String name) {
     this.tilesDir = tilesDir;
     this.name = name;
@@ -36,7 +36,7 @@ public class MultiMapSingleConfig {
   public TileMapBounds[] getTileBounds() {
       return this.bounds;
   }
-  
+
   public boolean isValid() {
     if (tilesPerFile <= 0) {
       Log.error("Conf for " + tilesDir + " invalid: tilesPerFile = " + tilesPerFile);
@@ -90,7 +90,7 @@ public class MultiMapSingleConfig {
   public int getHashSize() {
     return hashSize;
   }
-  
+
   public int getMaxZoom() {
       return zoomRange.getMaxZoom();
     }
@@ -102,7 +102,7 @@ public class MultiMapSingleConfig {
     public ZoomRange getZoomRange() {
       return zoomRange;
     }
-  
+
   public void setMaxZoom(final int maxZoom) {
     this.zoomRange = new ZoomRange(this.zoomRange.getMinZoom(), maxZoom);
   }

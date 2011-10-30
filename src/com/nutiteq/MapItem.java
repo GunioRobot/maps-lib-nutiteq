@@ -43,7 +43,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Constructor for map component wrapper, that can be used in high level UI
    * components.
-   * 
+   *
    * @param label
    *          name for the item, can be null
    * @param licenseKey
@@ -73,7 +73,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Constructor for map component wrapper, that can be used in high level UI
    * components.
-   * 
+   *
    * @param label
    *          name for the item, can be null
    * @param licenseKey
@@ -139,7 +139,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Define Control Keys codes for map manipulation. For example typical Select
    * key: <code>mapItem.defineControlKey(ControlKeys.SELECT_KEY, -5);</code>
-   * 
+   *
    * @param keyCode
    *          map component key code, see
    *          {@link com.nutiteq.controls.ControlKeys ControlKeys}
@@ -153,7 +153,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Change control keys handler used for actions mapping.
-   * 
+   *
    * @param keysHandler
    *          new keys mapping handler
    */
@@ -204,7 +204,7 @@ public class MapItem extends CustomItem implements MapListener {
    * &quot;needRepaint&quot; action forwarded from MapListener is used for
    * notifying if displayed map is complete or not. NB! must be AFTER
    * startMapping() call
-   * 
+   *
    * @param mL
    *          Listener class reference, e.g. <code>this</code>
    */
@@ -215,7 +215,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Set listener for component error events (connection errors, license errors,
    * parsing errors etc
-   * 
+   *
    * @param eL
    *          Listener class reference, e.g. <code>this</code>
    */
@@ -225,7 +225,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set middle point of map
-   * 
+   *
    * @param wgs
    *          a WgsPoint object
    * @param zoom
@@ -237,7 +237,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set Center point of map
-   * 
+   *
    * @param lon
    *          longitude, in WGS84 decimal degrees
    * @param lat
@@ -251,7 +251,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Get current center point of map
-   * 
+   *
    * @return a WgsPoint object
    */
   public WgsPoint getMiddlePoint() {
@@ -288,7 +288,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Add Place to map
-   * 
+   *
    * @param place
    *          a Place object
    */
@@ -298,7 +298,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Add elements to be displayed on map
-   * 
+   *
    * @param elements
    *          elements to be added for display
    */
@@ -308,7 +308,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Add many places to map
-   * 
+   *
    * @param places
    *          array of Place objects
    */
@@ -318,7 +318,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Remove Place from map
-   * 
+   *
    * @param place
    *          the Place object to be removed
    */
@@ -328,7 +328,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * remove several places from map
-   * 
+   *
    * @param places
    *          array of Place objects
    */
@@ -338,7 +338,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Add single line to map
-   * 
+   *
    * @param line
    *          a Line object
    */
@@ -348,7 +348,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Add multiple lines to map
-   * 
+   *
    * @param lines
    *          array of Line object
    * @see Line#Line(WgsPoint[] points, com.nutiteq.components.LineStyle style)
@@ -359,7 +359,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Remove previously added line
-   * 
+   *
    * @param line
    *          line to be removed
    */
@@ -369,7 +369,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Remove multiple lines
-   * 
+   *
    * @param lines
    *          lines to be removed
    */
@@ -380,7 +380,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Set zoom controls to be displayed on screen and used for touch screen
    * zooming.
-   * 
+   *
    * @param controls
    *          zoom controls to be used
    */
@@ -390,7 +390,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Show map zoom scale after zoom action. Defaults to false.
-   * 
+   *
    * @param showInicator
    *          should the zoom indicator be shown
    */
@@ -400,7 +400,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Get Bounding Box of current map view
-   * 
+   *
    * @return a Bounding Box object
    */
   public WgsBoundingBox getBoundingBox() {
@@ -410,7 +410,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Set bounding box for the view. Finds the best zoom level for the bounding
    * box view.
-   * 
+   *
    * @param bBox
    *          are to be displayed (in WGS84 coordinates)
    */
@@ -420,7 +420,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * get max and min zoom of current map (typically 0...18)
-   * 
+   *
    * @return a ZoomRange object
    */
   public ZoomRange getZoomRange() {
@@ -429,7 +429,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set map zoom without changing position.
-   * 
+   *
    * @param newZoom
    *          new zoom level
    */
@@ -439,7 +439,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Get the current zoom level.
-   * 
+   *
    * @return current zoom level
    */
   public int getZoom() {
@@ -449,7 +449,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Add KML layer to the map Usage example:
    * <code>mapItem.addKmlService(new KmlUrlReader("http://www.panoramio.com/panoramio.kml?LANG=en_US.utf8",true));</code>
-   * 
+   *
    * @param service
    *          Reference to KML Service, can be own implementation or use
    *          KmlUrlReader
@@ -461,7 +461,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * List currently added KML Services
-   * 
+   *
    * @return array of KmlServices
    */
 
@@ -471,7 +471,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Remove previously added kml service
-   * 
+   *
    * @param service
    *          service to be removed
    */
@@ -489,7 +489,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Change base map
-   * 
+   *
    * @param newMap
    *          reference to the map object
    * @see com.nutiteq.maps.CloudMade#CloudMade(String, int, int)
@@ -500,7 +500,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Retrieve currently used map.
-   * 
+   *
    * @return currently displayed map
    */
   public GeoMap getMap() {
@@ -510,7 +510,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Get additional info for internally handled (retrieved from kml service)
    * objects.
-   * 
+   *
    * @param place
    *          place associated with internal data
    * @return info object with additional data
@@ -521,7 +521,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Replace the default cursor.
-   * 
+   *
    * @param newCursor
    *          cursor implementation
    */
@@ -531,7 +531,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Remove given elements from map display
-   * 
+   *
    * @param elements
    *          elements to be removed
    */
@@ -541,7 +541,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Get internal log for library.
-   * 
+   *
    * @return internal log
    */
   public String getLibraryLog() {
@@ -551,7 +551,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Set download stream opener, that creates connections to downloaded
    * resources
-   * 
+   *
    * @param opener
    *          opener to be used for resources reading
    */
@@ -562,7 +562,7 @@ public class MapItem extends CustomItem implements MapListener {
   /**
    * Set panning strategy for map component. If not set, the strategy will
    * default to {@link com.nutiteq.ui.ThreadDrivenPanning}
-   * 
+   *
    * @param panningStrategy
    *          new panning strategy
    */
@@ -572,7 +572,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set search strategy for map tile.
-   * 
+   *
    * @param tileSearchStrategy
    *          search strategy to be used
    */
@@ -582,7 +582,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set location source with GPS marker to be displayed on map
-   * 
+   *
    * @param marker
    *          source to be used
    */
@@ -603,7 +603,7 @@ public class MapItem extends CustomItem implements MapListener {
    * <li>map tiles to rms level</li>
    * <li>kml icons to memory and rms</li>
    * </ul>
-   * 
+   *
    * @param cache
    */
   public void setNetworkCache(final com.nutiteq.cache.Cache cache) {
@@ -628,7 +628,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Enqueue new download task to be executed by library.
-   * 
+   *
    * @param downloadable
    *          resource to be downloaded
    * @param cacheLevel
@@ -640,7 +640,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set zoom indicator to be painted on display
-   * 
+   *
    * @param zoomIndicator
    *          zoom indicator to use
    */
@@ -658,7 +658,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set download counter used for gathering information about network traffic
-   * 
+   *
    * @param downloadCounter
    *          implementation used
    */
@@ -680,7 +680,7 @@ public class MapItem extends CustomItem implements MapListener {
 
   /**
    * Set used implementation for network traffic display on map.
-   * 
+   *
    * @param display
    *          display used for info show
    */

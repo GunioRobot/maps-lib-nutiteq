@@ -18,6 +18,6 @@ public interface OnMapElement {
   int distanceInPixels(MapPos cursorOnMap);
 
   WgsPoint[] getPoints();
-  
+
   Label getLabel();
 }

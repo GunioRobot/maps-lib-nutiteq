@@ -14,7 +14,7 @@ public interface DirectionsWaiter {
 
   /**
    * Give resut to waiting object
-   * 
+   *
    * @param route
    *          found route
    */
@@ -22,7 +22,7 @@ public interface DirectionsWaiter {
 
   /**
    * Parsing error notification
-   * 
+   *
    * @param message
    *          detalis
    */
@@ -31,7 +31,7 @@ public interface DirectionsWaiter {
   /**
    * Server side routing errors. Codes defined in
    * {@link com.nutiteq.services.OpenLSDirections}
-   * 
+   *
    * @param errors
    *          possible error codes from server
    */

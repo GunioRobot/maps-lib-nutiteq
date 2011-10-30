@@ -26,10 +26,10 @@ public class Graphics {
   private int translateY;
   private int clipX;
   private int clipY;
-  
+
   /**
    * Wrap 'native' RIM UI Graphics class
-   * 
+   *
    * @param buffered
    *          graphics to be wrapped
    */
@@ -43,7 +43,7 @@ public class Graphics {
         this.translateX += x;
         this.translateY += y;
   }
-  
+
   /**
    * get RIM UI Graphics class, enables to use native methods of it
    * @return RIM native Graphics
@@ -52,7 +52,7 @@ public class Graphics {
   public net.rim.device.api.ui.Graphics getNative() {
       return this.buffered;
   }
-  
+
   public void setColor(final int color) {
     this.color = color;
     buffered.setColor(color);
@@ -87,7 +87,7 @@ public class Graphics {
 
   /**
    * Not implemented yet
-   * 
+   *
    * @param x1
    * @param y1
    * @param x2
@@ -174,7 +174,7 @@ public class Graphics {
   public int getClipHeight() {
     return buffered.getClippingRect().height;
   }
-  
+
   public void drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
   {
     buffered.drawRoundRect(x + this.translateX, y + this.translateY, width + 1, height + 1, arcWidth, arcHeight);

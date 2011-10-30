@@ -3,7 +3,7 @@ package com.nutiteq.maps;
 /**
  * OpenAerial map streamed via Nutiteq tile streaming server. Uses 64x64 pixel
  * tiles.
- * @deprecated The OpenAerialMap.org is down 
+ * @deprecated The OpenAerialMap.org is down
 
  */
 public class StreamedOpenAerialMap extends NutiteqStreamedMap {

@@ -12,7 +12,7 @@ import com.nutiteq.net.DownloadCounter;
 public interface ResourceStreamWaiter {
   /**
    * Stream for resource has been opened
-   * 
+   *
    * @param stream
    *          input stream to data
    * @param counter

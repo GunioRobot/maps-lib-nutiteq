@@ -171,7 +171,7 @@ public class Polygon implements OnMapElement {
   public WgsPoint[] getPoints() {
       return coordinates;
     }
-  
+
   private boolean viewWithinBoundingBox(final int viewX, final int viewY, final int viewW,
       final int viewH) {
     return Utils.rectanglesIntersect(boundingBoxMin.getX(), boundingBoxMin.getY(), boundingBoxMax

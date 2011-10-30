@@ -82,7 +82,7 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
           final boolean responsePacked){
       this(servicesHandler, service, serviceUrl, stylesCache, tasksRunner, false, DEFAULT_KML_ICON);
   }
-  
+
   public KmlReader(final KmlElementsWaiter servicesHandler, final KmlService service,
       final String serviceUrl, final KmlStylesCache stylesCache, final TasksRunner tasksRunner,
       final boolean responsePacked, final String defaultIcon) {
@@ -101,8 +101,8 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
 
   }
 
-  
-  
+
+
   public String resourcePath() {
     return serviceUrl;
   }
@@ -111,17 +111,17 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
     boolean guessPacked = false;
     if(data[0]==31 && data[1]==-117){
         guessPacked=true;
-        Log.debug("Guess response packed based on first 2 data bytes"); 
+        Log.debug("Guess response packed based on first 2 data bytes");
     }else{
         Log.debug("Response NOT packed based on first 2 data bytes");
     }
-        
+
     final byte[] finalData = (responsePacked || guessPacked) ? GZIP.inflate(data) : data;
     // remove BOM (ie the first 3 bytes)
     if(finalData[0]==0xef && finalData[1]==0xbb && finalData[2]==0xbf){
         System.arraycopy(finalData, 3, finalData, 0, finalData.length-3);
     }
-        
+
     final Reader reader = Utils.createInputStreamReader(finalData);
 //    final ByteArrayInputStream bais = new ByteArrayInputStream(finalData);
     try {
@@ -133,7 +133,7 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
       IOUtils.closeReader(reader);
     }
     Log.debug("KmlReader done, read places: "+placeCount);
-    
+
   }
 
   public void notifyError() {
@@ -258,7 +258,7 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
     String address = null;
     String snippet = null;
     ExtendedDataMap extendedDataMap = new ExtendedDataMap();
-    
+
     final Vector kmlElements = new Vector();
     try {
       int eventType = parser.next();
@@ -278,7 +278,7 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
           } else if (PLACEMARK_SNIPPET_TAG.equals(tagName)) {
             snippet = parser.nextText();
           } else if (PLACEMARK_XDATA_TAG.equals(tagName)) {
-             extendedDataMap = readXData(parser); 
+             extendedDataMap = readXData(parser);
           } else if (POLYGON_TAG.equals(tagName)) {
             kmlElements.addElement(readPolygon(parser));
           } else if (LINE_STRING_TAG.equals(tagName)) {
@@ -324,18 +324,18 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
   }
 
   private ExtendedDataMap readXData(KXmlParser parser) {
-      ExtendedDataMap out = new ExtendedDataMap(); 
+      ExtendedDataMap out = new ExtendedDataMap();
       String key = null;
       String value = null;
       int eventType = -1;
       String tagName=null;
-      
+
       try {
         search:
         while (!PLACEMARK_XDATA_TAG.equals(tagName)){ // run over all key-value pairs
             // find key
             tagName = null;
-            
+
             while (!DATA_TAG.equals(tagName)) {
                     eventType = parser.next();
                     tagName = parser.getName();
@@ -358,15 +358,15 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
                 }
 
                 // value found, write to output
-                
+
                 //System.out.println(value);
                 out.addPair(key, value);
-                
+
             }
     } catch (Exception e) {
         Log.printStackTrace(e);
     }
-      
+
     return out;
 }
 
@@ -420,7 +420,7 @@ public class KmlReader implements ResourceRequestor, ResourceDataWaiter {
         return result;
     }
     */
-  
+
 protected Line readLine(final KXmlParser parser) throws IOException {
     WgsPoint[] coordinates = null;
     try {
@@ -539,8 +539,8 @@ protected Line readLine(final KXmlParser parser) throws IOException {
     return result;
   }
 
-  
-  
+
+
   protected WgsPoint[] parseWgsCoordinates(final String kmlCoordinates) {
     final Vector result = new Vector();
     if (kmlCoordinates == null) {

@@ -12,7 +12,7 @@ public class RouteInstruction {
   private final WgsPoint point;
 
   /**
-   * 
+   *
    * @param instructionNumber
    *          number of this instruction
    * @param instructionType

@@ -42,7 +42,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
           final String serviceUrl){
       this(servicesHandler, service, serviceUrl, DEFAULT_KML_ICON);
   }
-  
+
   public JsonKmlReader(final KmlElementsWaiter servicesHandler, final KmlService service,
       final String serviceUrl, final String defaultIcon) {
     this.servicesHandler = servicesHandler;
@@ -65,19 +65,19 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
     boolean guessPacked = false;
     if(data[0]==31 && data[1]==-117){
         guessPacked=true;
-        Log.debug("Guess response packed based on first 2 data bytes"); 
+        Log.debug("Guess response packed based on first 2 data bytes");
     }else{
         Log.debug("Response NOT packed based on first 2 data bytes");
     }
-        
-      
+
+
 //      Log.debug("KmlReader.read() response packed ? " + responsePacked + ". Bytes:"+data.length);
     final byte[] finalData = guessPacked ? GZIP.inflate(data) : data;
     // remove BOM (ie the first 3 bytes)
     if(finalData[0]==0xef && finalData[1]==0xbb && finalData[2]==0xbf){
         System.arraycopy(finalData, 3, finalData, 0, finalData.length-3);
     }
-        
+
     try {
       servicesHandler.addKmlPlaces(service, read(finalData, service.maxResults()));
     } catch (final IOException e) {
@@ -86,7 +86,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
     } finally {
     }
     Log.debug("JsonKmlReader done, read places: "+placeCount);
-    
+
   }
 
   public void notifyError() {
@@ -97,10 +97,10 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
 
     final Vector places = new Vector();
 // read JSON and create KmlPlace from it.
-    
+
     String jsonString = new String(finalData,"UTF8");
     ExtendedDataMap xdata = new ExtendedDataMap();
-    
+
     try {
         JSONObject root = new JSONObject(jsonString);
         int found = root.getInt("found");
@@ -109,7 +109,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
         JSONArray features = root.getJSONArray("features");
 
         int size = features.length();
-        
+
         for (int i=0;i<size;i++){
             final Vector geomElements = new Vector();
 
@@ -126,7 +126,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
             }
             JSONObject properties = feature.optJSONObject("properties");
             String name = properties.optString("name");
-            
+
             JSONObject centroid = feature.optJSONObject("centroid");
             JSONArray coordinates = centroid.optJSONArray("coordinates");
 
@@ -139,7 +139,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
             // read geometry
             JSONObject geometry = feature.optJSONObject("geometry");
             String geomType = geometry.getString("type");
-            
+
             if (geomType.equals("POLYGON")){
                 JSONArray geomCoords = geometry.getJSONArray("coordinates");
                 Polygon polygon = new Polygon(getCoords(geomCoords));
@@ -167,7 +167,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
                 }
             }
 
-            
+
             for (Enumeration e = properties.keys() ; e.hasMoreElements() ;) {
                 String key = (String) e.nextElement();
                 String val = properties.getString(key);
@@ -198,19 +198,19 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
             kmlPlace.setOnMapElements(elements);
             KmlPlace place = new KmlPlace(kmlPlace, null, desc, null, null, xdata);
             places.addElement(place);
-            
-        
+
+
         } // for each feature found
-        
+
     } catch (Exception e) {
         e.printStackTrace();
         notifyError();
     }
 
-    
+
     // TODO now some dummy place for testing
 
-    
+
     final KmlPlace[] result = new KmlPlace[places.size()];
     places.copyInto(result);
     placeCount = places.size();
@@ -240,7 +240,7 @@ public class JsonKmlReader implements ResourceRequestor, ResourceDataWaiter {
       e.printStackTrace();
     }
 
-      
+
       WgsPoint[] coords = new WgsPoint[coordsV.size()];
       coordsV.copyInto(coords);
       return coords;

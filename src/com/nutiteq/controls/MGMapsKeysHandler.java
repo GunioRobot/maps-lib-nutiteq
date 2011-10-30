@@ -53,7 +53,7 @@ public class MGMapsKeysHandler implements ControlKeysHandler {
     keysMapping.defineKey(ControlKeys.ZOOM_IN_KEY, -36);
     // Vol'+' on Sony-Ericsson P990
     keysMapping.defineKey(ControlKeys.ZOOM_IN_KEY, -38);
-    
+
     keysMapping.defineKey(ControlKeys.ZOOM_OUT_KEY, Canvas.KEY_STAR);
     // 'i' and 'o' for zooming In and Out on phones with full keyboards
     keysMapping.defineKey(ControlKeys.ZOOM_OUT_KEY, 'o');

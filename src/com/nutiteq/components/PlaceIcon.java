@@ -13,7 +13,7 @@ public class PlaceIcon implements Placemark {
 
   /**
    * Create a icon object with default anchor point.
-   * 
+   *
    * @param icon
    *          image used for place marking
    */
@@ -25,7 +25,7 @@ public class PlaceIcon implements Placemark {
    * Create a icon object with custom image placement. For example for balloon
    * image, that should point to a place on map, bottom center should be defined
    * as anchor point for correct image placement.
-   * 
+   *
    * @param icon
    *          place image
    * @param anchorX

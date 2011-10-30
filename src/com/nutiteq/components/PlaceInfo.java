@@ -71,15 +71,15 @@ public class PlaceInfo {
        return extendedDataMap;
    }
 /**
- * Returns specific ExtendedData value by key 
+ * Returns specific ExtendedData value by key
  * @param key
  *      Key for the data
- */  
+ */
   public String getExtendedData(final String key) {
       return extendedDataMap.getValue(key);
     }
 
-  
+
   /**
    * Not part of public API
    */
@@ -90,6 +90,6 @@ public class PlaceInfo {
   public WgsPoint getCoordinates() {
     return wgs;
   }
-    
+
 }
 

@@ -10,7 +10,7 @@ public class AndroidLogger implements Logger {
 
   /**
    * Create new logger for Android platform.
-   * 
+   *
    * @param loggingTag
    *          logging tag used in android log lines
    */

@@ -6,7 +6,7 @@ package com.nutiteq.net;
 public interface DownloadCounter {
   /**
    * Successful network request has been made.
-   * 
+   *
    * @param url
    *          request url
    */
@@ -14,7 +14,7 @@ public interface DownloadCounter {
 
   /**
    * Data for given url was retrieved from cache
-   * 
+   *
    * @param url
    *          request url
    * @param dataLength
@@ -24,7 +24,7 @@ public interface DownloadCounter {
 
   /**
    * Notify about donwloaded bytes
-   * 
+   *
    * @param dataLength
    *          number of bytes downloaded
    */

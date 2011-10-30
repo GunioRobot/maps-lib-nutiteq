@@ -62,7 +62,7 @@ public class RmsCache implements Cache {
 
   /**
    * Creates a new record stores cache with given number of cache buckets.
-   * 
+   *
    * @param cachePrefix
    *          prefix for cache
    * @param maxBucketSize

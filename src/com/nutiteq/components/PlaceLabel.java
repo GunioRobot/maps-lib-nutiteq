@@ -33,7 +33,7 @@ public class PlaceLabel implements Label {
 
   /**
    * PlaceLabel constructor.
-   * 
+   *
    * @param label
    *          string label for place
    * @param displayStyle
@@ -47,7 +47,7 @@ public class PlaceLabel implements Label {
   /**
    * Create label with default display style (label displayed right over place
    * on map)
-   * 
+   *
    * @param name
    *          string label for place
    */
@@ -130,12 +130,12 @@ public class PlaceLabel implements Label {
 // for line, then icon can be null
     int iconY;
     if(icon!=null){
-        iconY = icon.getAnchorY(zoom);    
+        iconY = icon.getAnchorY(zoom);
     }else{
-        iconY = 8; 
+        iconY = 8;
     }
-        
-    
+
+
     final int textAnchorY = iconY + 3
         + (defaultFont.getHeight() * nameSplit.length);
     final int topX = screenX - textAnchorX;

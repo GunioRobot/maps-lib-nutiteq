@@ -39,7 +39,7 @@ public class Image {
     final Bitmap bitmap = BitmapFactory.decodeStream(stream);
     return new Image(bitmap);
   }
-  
+
   public static Image createRGBImage(final int[] imageData, final int width, final int height, final boolean processAlpha){
       Config conf = null;
       if(processAlpha){
@@ -47,7 +47,7 @@ public class Image {
       }else{
           conf = Bitmap.Config.RGB_565;
       }
-      
+
       final Bitmap tmp = Bitmap.createBitmap(imageData,width,height,conf);
       return new Image(tmp);
   }

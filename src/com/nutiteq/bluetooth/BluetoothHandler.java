@@ -6,7 +6,7 @@ package com.nutiteq.bluetooth;
 public interface BluetoothHandler {
   /**
    * Give found devices to handler class
-   * 
+   *
    * @param devicesFound
    *          devices found by bluetooth device
    */

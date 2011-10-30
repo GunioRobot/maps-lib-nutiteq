@@ -30,7 +30,7 @@ public class BluetoothProvider extends Thread implements LocationSource {
 
   /**
    * Create provider
-   * 
+   *
    * @param connectionProvider
    *          object for connection handling
    * @param url

@@ -14,7 +14,7 @@ public class JaredOpenStreetMap extends EPSG3785 implements GeoMap, UnstreamedMa
 
   /**
    * Create map with tiles located at jar root.
-   * 
+   *
    * @param tileSize
    *          map tile size
    * @param minZoom
@@ -29,7 +29,7 @@ public class JaredOpenStreetMap extends EPSG3785 implements GeoMap, UnstreamedMa
   /**
    * Create map with tiles in defined path. For example:
    * <code>/resources/map_tiles/</code>.
-   * 
+   *
    * @param tilesLocationPath
    *          path to directory for files
    * @param tileSize

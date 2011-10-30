@@ -8,7 +8,7 @@ package com.nutiteq.io;
 public interface ResourceDataWaiter {
   /**
    * Data for resource retrieved
-   * 
+   *
    * @param data
    *          retrieved data
    */

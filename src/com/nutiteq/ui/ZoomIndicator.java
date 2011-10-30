@@ -12,17 +12,17 @@ import com.nutiteq.components.ZoomRange;
 public interface ZoomIndicator {
   /**
    * Is this element visible
-   * 
+   *
    * @return is element visible
    */
   boolean isVisible();
 
   /**
    * Paint element on screen
-   * 
+   *
    * <strong>Note:</strong> if you change clip on graphics, please restore it to
    * previous state.
-   * 
+   *
    * @param g
    *          graphics object to paint on
    * @param currentZoom
@@ -36,7 +36,7 @@ public interface ZoomIndicator {
 
   /**
    * Set zoom range that is available
-   * 
+   *
    * @param zoomRange
    *          available zoom range
    */
@@ -44,14 +44,14 @@ public interface ZoomIndicator {
 
   /**
    * How long should element be visible after zoom keys have been pressed
-   * 
+   *
    * @return display time in milliseconds
    */
   long displayTime();
 
   /**
    * Set element visible
-   * 
+   *
    * @param visible
    *          show/hide this element from screen
    */

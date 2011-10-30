@@ -22,7 +22,7 @@ public class MapView extends View implements MapListener {
   private static final int ACTION_POINTER_1_UP = 6;
   private static final int ACTION_POINTER_2_UP = 262;
 private static final int ACTION_POINTER_2_DOWN = 261;
-  
+
 private BasicMapComponent mapComponent;
   private Graphics g;
   private Canvas wrapped;
@@ -55,7 +55,7 @@ private BasicMapComponent mapComponent;
       System.out.println("touch event action="+event.getAction());
       boolean hasMultiTouch = Integer.parseInt(Build.VERSION.SDK) >= 5;
       int nPointer = hasMultiTouch ? MotionEventWrap.getPointerCount(event) : 1;
-      
+
       final int x = (int) event.getX();
       final int y = (int) event.getY();
       switch (event.getAction()) {
@@ -71,7 +71,7 @@ private BasicMapComponent mapComponent;
               float moved = altPointerStartDist2 - altPointerStartDist;
 
               System.out.println("dt finish "+altPointerStartX2+" "+altPointerStartY2+" "+altPointerStartDist2+ " "+moved);
-              
+
               if (moved < -10000 && moved > -70000) {
                   mapComponent.zoomOut();
                   System.out.println("Zoomed out to " + mapComponent.getZoom());
@@ -105,7 +105,7 @@ private BasicMapComponent mapComponent;
 
               System.out.println("dual-touch started from "+altPointerStartX+" "+altPointerStartY+ " "+altPointerStartDist);
               }
-              
+
               break;
           case MotionEvent.ACTION_DOWN:
               mapComponent.pointerPressed(x, y);
@@ -122,15 +122,15 @@ private BasicMapComponent mapComponent;
           case MotionEvent.ACTION_UP:
               mapComponent.pointerReleased(x, y);
               System.out.println("action up "+x+" "+ y);
-              dualZoom=false; // reset 
+              dualZoom=false; // reset
               break;
 
           }
           return true;
-      
+
   }
-  
-  
+
+
   @Override
   public boolean onKeyDown(final int keyCode, final KeyEvent event) {
     if (event.getRepeatCount() == 0) {

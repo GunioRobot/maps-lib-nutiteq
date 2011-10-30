@@ -28,7 +28,7 @@ public class LocationAPIProvider implements Runnable, LocationSource,
   /**
    * Create location provider with given update interval (in milliseconds) and
    * without any accuracy requirements.
-   * 
+   *
    * @param updateInterval
    *          location update time in milliseconds
    */
@@ -45,7 +45,7 @@ public class LocationAPIProvider implements Runnable, LocationSource,
    * On <strong>Nokia</strong> phones this could trigger assisted positioning
    * for faster location finding.
    * </p>
-   * 
+   *
    * @param updateInterval
    *          location update time in milliseconds
    * @param accuracy

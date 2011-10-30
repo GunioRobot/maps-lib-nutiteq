@@ -18,7 +18,7 @@ public class UserDefinedKeysMapping implements ControlKeysHandler {
 
   /**
    * Define controlaction for key code.
-   * 
+   *
    * @param actionCode
    *          action code
    * @param keyCode

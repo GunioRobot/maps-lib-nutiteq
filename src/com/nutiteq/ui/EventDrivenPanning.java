@@ -2,10 +2,10 @@ package com.nutiteq.ui;
 
 /**
  * Unthreaded panning implementation that uses key repeated events for panning.
- * 
+ *
  * Map moving speed is progressive, based on panning action length. At first map
  * is moved by one pixel, then by 2, 4 and 8 pixels.
- * 
+ *
  * NOTE - because {@link com.nutiteq.MapComponent} has an unthreaded
  * implementation, this panning strategy can't be used with default on screen
  * controls for panning with stylus. With stylus there are no continuous events

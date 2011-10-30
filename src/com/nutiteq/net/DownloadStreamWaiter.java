@@ -9,7 +9,7 @@ import java.io.InputStream;
 public interface DownloadStreamWaiter {
   /**
    * Give opened stream to waiter.
-   * 
+   *
    * @param stream
    *          opened stream
    * @throws IOException
@@ -19,7 +19,7 @@ public interface DownloadStreamWaiter {
 
   /**
    * Error notification with codes from {@link DownloadStreamOpener}
-   * 
+   *
    * @param errorCode
    *          error code
    * @param message

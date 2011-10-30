@@ -8,7 +8,7 @@ public interface ResourceRequestor {
   /**
    * Get path to resource. Currently library supports retrieval from network and
    * application jar
-   * 
+   *
    * @return path to resource
    */
   String resourcePath();
@@ -21,7 +21,7 @@ public interface ResourceRequestor {
   /**
    * Define at which level should given resource be cached. Check
    * {@link com.nutiteq.cache.Cache}
-   * 
+   *
    * @return cache level for resource
    */
   int getCachingLevel();

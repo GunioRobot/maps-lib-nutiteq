@@ -13,7 +13,7 @@ public class LineStyle {
 
   /**
    * Constructor for line style object
-   * 
+   *
    * @param color
    *          line color in format ARGB
    * @param width
@@ -26,7 +26,7 @@ public class LineStyle {
 
   /**
    * Not part of public API
-   * 
+   *
    * @return line color
    */
   public int getColor() {
@@ -35,7 +35,7 @@ public class LineStyle {
 
   /**
    * Not part of public API
-   * 
+   *
    * @return line width
    */
   public int getWidth() {

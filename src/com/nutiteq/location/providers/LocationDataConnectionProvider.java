@@ -8,7 +8,7 @@ import java.io.IOException;
 public interface LocationDataConnectionProvider {
   /**
    * Open connection with given url
-   * 
+   *
    * @param url
    *          url for connection
    * @return return opened connection

@@ -25,7 +25,7 @@ public class GoogleStaticMap extends EPSG3785 implements GeoMap, UnstreamedMap {
 
   /**
    * Create new GoogleStaticMap to be displayed.
-   * 
+   *
    * @param developerKey
    *          identifies the Maps API key
    * @param tileSize

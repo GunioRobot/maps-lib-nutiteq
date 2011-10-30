@@ -6,7 +6,7 @@ package com.nutiteq.location;
 public interface LocationSourceWaiter {
   /**
    * Receive location source from helper
-   * 
+   *
    * @param locationSource
    *          location source selected from browser
    */

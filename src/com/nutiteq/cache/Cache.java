@@ -38,7 +38,7 @@ public interface Cache {
 
   /**
    * Get cached data.
-   * 
+   *
    * @param cacheKey
    *          key that was used for data caching
    * @return cached data
@@ -47,7 +47,7 @@ public interface Cache {
 
   /**
    * Cache given data
-   * 
+   *
    * @param cacheKey
    *          key for the cached data
    * @param data
@@ -59,7 +59,7 @@ public interface Cache {
 
   /**
    * Does this cache contain data for given cache key
-   * 
+   *
    * @param cacheKey
    *          cache key checked
    * @return if data for key present
@@ -68,7 +68,7 @@ public interface Cache {
 
   /**
    * Does the specified cache level contain given cache key
-   * 
+   *
    * @param cacheKey
    *          cache key to be checked
    * @param cacheLevel

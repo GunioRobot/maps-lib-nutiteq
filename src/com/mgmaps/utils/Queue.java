@@ -35,7 +35,7 @@ public class Queue {
 
   /**
    * Insert an element into the queue.
-   * 
+   *
    * @param o
    *          the object to push
    */
@@ -56,7 +56,7 @@ public class Queue {
 
   /**
    * Remove an element from the queue.
-   * 
+   *
    * @param pos
    *          the position of the element to remove
    */
@@ -74,7 +74,7 @@ public class Queue {
 
   /**
    * Remove an object from the queue.
-   * 
+   *
    * @param o
    *          the object to remove
    */
@@ -89,7 +89,7 @@ public class Queue {
 
   /**
    * Is the queue empty?
-   * 
+   *
    * @return true if it is
    */
   public synchronized boolean isEmpty() {
@@ -98,7 +98,7 @@ public class Queue {
 
   /**
    * Get queue size.
-   * 
+   *
    * @return the size of the queue
    */
   public synchronized int getSize() {
@@ -107,7 +107,7 @@ public class Queue {
 
   /**
    * Get the number of elements
-   * 
+   *
    * @return the number of elements
    */
   public synchronized int getCount() {
@@ -116,7 +116,7 @@ public class Queue {
 
   /**
    * Get the top element
-   * 
+   *
    * @return the top element
    */
   public synchronized Object top() {
@@ -128,7 +128,7 @@ public class Queue {
 
   /**
    * Pop the top element.
-   * 
+   *
    * @return the top element
    */
   public synchronized Object pop() {

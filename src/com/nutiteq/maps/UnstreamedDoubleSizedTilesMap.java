@@ -15,7 +15,7 @@ public class UnstreamedDoubleSizedTilesMap extends BaseMap implements GeoMap, Un
 
 /**
  * Resizes ("zooms in") all map images for the map, exactly 2 times
- * 
+ *
  * @param resizedMap Map which will be used as resized map, could be any map service of library
  */
   public UnstreamedDoubleSizedTilesMap(final GeoMap resizedMap) {
@@ -24,7 +24,7 @@ public class UnstreamedDoubleSizedTilesMap extends BaseMap implements GeoMap, Un
 
 /**
  * Digitally zooms map images for the map
- * 
+ *
  * @param resizedMap Map which will be used as resized map, could be any map service of library
  * @param resizeOnlyLastLevel If true then enable to "digitally zoom" last map level only, otherwise zoom all maps.
  */

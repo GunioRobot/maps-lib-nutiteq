@@ -33,7 +33,7 @@ public class OnScreenZoomControls {
 
   /**
    * Create zoom controls with given image.
-   * 
+   *
    * @param controlsImage
    *          image to be used
    */
@@ -51,7 +51,7 @@ public class OnScreenZoomControls {
 
   /**
    * Not part of public API
-   * 
+   *
    * @param g
    * @param displayWidth
    * @param displayHeight
@@ -67,7 +67,7 @@ public class OnScreenZoomControls {
 
   /**
    * Not part of public API
-   * 
+   *
    * @param x
    * @param y
    * @return action code

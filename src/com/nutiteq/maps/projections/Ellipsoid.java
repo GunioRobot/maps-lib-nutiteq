@@ -23,10 +23,10 @@ public class Ellipsoid {
   // E = 0.081819190928906199466877879557762
   public static final Ellipsoid WGS84_3 = new Ellipsoid(6378137.0, 6356752.314245179);
   // E = 0.081819190842622444592385648655019
-  
+
   public static final Ellipsoid WGRS8084 = new Ellipsoid(6378137.0, 6356752.3);
   // E = 0.081819218048344747117551469344841
-  
+
   /**
    * Krasovsky ellipsoid
    */
@@ -35,7 +35,7 @@ public class Ellipsoid {
 
   /**
    * create a new ellipsoid and precompute its parameters
-   * 
+   *
    * @param equatorialRadius
    *          ellipsoid long axis (in meters)
    * @param polarRadius
@@ -61,7 +61,7 @@ public class Ellipsoid {
   public double getEccentricity() {
     return eccentricity;
   }
-  
+
   public double getInverseFlattening() {
     return inverseFlattening;
   }
